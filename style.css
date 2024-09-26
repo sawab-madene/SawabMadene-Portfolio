@@ -1,0 +1,162 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-icons {
+    justify-content: center;
+  }
+  .container {
+    text-align: center;
+  }
+  .row {
+    justify-content: center;
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.profile-info h1:hover {
+  transform: scale(1.05); /* Slightly enlarge the name */
+  color: #0366d6; /* Change color on hover */
+}
+
+.profile-info p {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #666;
+}
+
+.profile-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.profile-icons a img {
+  width: 24px; /* Adjust the width */
+  height: 24px; /* Adjust the height */
+  opacity: 0.7;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.profile-icons a img:hover {
+  transform: scale(1.6); /* Slightly enlarge the icon */
+  opacity: 1;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px #887676;
+  margin: 10px;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance the shadow */
+}
+
+.card .ccimg img {
+  width: 100%;
+  height: auto;
+}
+
+.card .cdesc {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.card .cdesc a:hover {
+  text-decoration: underline;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.ctitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.ctitle:hover {
+  transform: scale(1.05); /* Slightly enlarge the title */
+  color: #0366d6; /* Change color on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  animation: fadeIn 1s ease-in-out;
+}
